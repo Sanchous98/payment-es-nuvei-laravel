@@ -1,0 +1,54 @@
+{
+  "name": "techork/payment-es-nuvei-laravel",
+  "type": "library",
+  "authors": [
+    {
+      "name": "andrea.palladio",
+      "email": "andrea.palladio@kiv.dev"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "techork/payment-es-laravel": "dev-master",
+    "nuvei/nuvei-server-php": "^3.2",
+    "symfony/serializer": "^7.2",
+    "illuminate/console": "^11.0 || ^12.0"
+  },
+  "require-dev": {
+    "pestphp/pest": "^3.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "PaymentSystem\\Laravel\\Nuvei\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PaymentSystem\\Laravel\\Nuvei\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:Sanchous98/payment-es.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:Sanchous98/payment-es-laravel.git"
+    }
+  ],
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "PaymentSystem\\Laravel\\Nuvei\\PaymentNuveiProvider"
+      ]
+    }
+  }
+}
